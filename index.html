@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DriveNow all types of vehicles rental services company.">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="icons/favicon.ico">
+    <title>DriveNow</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container">
+            <a class="logo" href="index.html">Drive<span>Now</span></a>
+            <!-- Open Mobile Menu -->
+            <img id="menu-open-scroll" class="mobile-menu-open" onclick="openNav()" src="icons/mobile-menu.svg" alt="Open Mobile Navigation Menu">
+            <!-- <img id="menu-open" class="mobile-menu-open" onclick="openNav()" src="icons/mobile-menu.svg" alt="Open Mobile Navigation Menu"> -->
+            <nav class="mobile-navigation" id="mobile">
+                <!-- Close Mobile Menu -->
+                <img id="menu-close" class="mobile-menu-close" onclick="closeNav()" src="icons/mobile-menu-close.svg" alt="Close Mobile Navigation Menu">
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Desktop Navigation -->
+            <nav class="desktop-navigation">
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="fb-icon"><a href="#"></a></li>
+                    <li class="tweet-icon"><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="left-col">
+                <h1>As Good As New</h1>
+                <div class="subthings">
+                    <p>Whatever you need, whenever you want.<br>Without the cost or hassle of owning.</p>
+                    <a href="reservation.html" class="yellow-button">Rent a Vehicle</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero End -->
+
+    <!-- Features/Advantages Section -->
+    <section class="features">
+        <div class="container">
+            <ul class="features-list">
+                <li>We provide more than just traditional car rental. We're your global transportation solution.</li>
+                <li>Our customized rental programs are designed specifically to meet your needs.</li>
+                <li>We offer a wide range of vehicles for different tasks.</li>
+                <li>Reservation anytime you want.</li>
+                <li>Customer Services 24/7.</li>
+            </ul>
+            <div class="rent-illus">
+                <img src="images/rent.png" alt="Vehicle Rent Illustration of hand giving key to another hand">
+            </div>
+        </div>
+    </section>
+    <!-- Features/Advantages End -->
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="featured">Featured Vehicles</h2>
+            <div class="vehicles">
+
+                <div class="car-card">
+                    <img src="images/moto-1.jpg" alt="Vehicle Type Motorbike" class="car-img">
+                    <h3 class="car-title">Motorbike</h3>
+                    <p class="car-price">Starts at <span>10€</span> per day</p>
+                    <ul class="car-specs">
+                        <li class="car-specs-fuel">Fuel Type : <span>Electric, Gasoline.</span></li>
+                        <li class="car-specs-transmission">Transmission Type : <span>None.</span></li>
+                    </ul>
+                </div>
+
+                <div class="car-card">
+                    <img src="images/berline-1.png" alt="Vehicle Type Luxury" class="car-img">
+                    <h3 class="car-title">Luxury</h3>
+                    <p class="car-price">Starts at <span>20€</span> per day</p>
+                    <ul class="car-specs">
+                        <li class="car-specs-fuel">Fuel Type : <span>Hybrid, Gasoline, Diesel.</span></li>
+                        <li class="car-specs-transmission">Transmission Type : <span>Automatic.</span></li>
+                    </ul>
+                </div>
+
+                <div class="car-card">
+                    <img src="images/camion-1.png" alt="Vehicle Type Truck" class="car-img">
+                    <h3 class="car-title">Truck</h3>
+                    <p class="car-price">Starts at <span>250€</span> per day</p>
+                    <ul class="car-specs">
+                        <li class="car-specs-fuel">Fuel Type : <span>Diesel.</span></li>
+                        <li class="car-specs-transmission">Transmission Type : <span>Automatic.</span></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="view-button">
+                <a href="gallery.html" class="yellow-button">View More</a>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery End -->
+
+    <!-- Reservation/Contact Section -->
+    <section class="resertact">
+        <div class="container">
+            <!-- Reservation Option Select and Estimated Price Calculation -->
+            <div class="reservation">
+                <h2>Reservation</h2>
+                <form name="myform">
+                    <!-- Option Values as the base price of each vehicle -->
+                    <select name="vehicleItems" id="vehicleItems" onChange="resetToDefault(); calculatePrice()">
+                        <option hidden disabled selected value="0">-- Choose a type of Vehicle --</option>
+                        <option value="10">Motorbike (10€)</option>
+                        <option value="12">Economy (12€)</option>
+                        <option value="14">Compact (14€)</option>
+                        <option value="16">Utility (16€)</option>
+                        <option value="20">Luxury (20€)</option>
+                        <option value="250">Truck (250€)</option>
+                        <option value="900">Construction Machine (900€)</option>
+                    </select>
+                    <!-- Option Values of fuel to calculate the percentage of vehicle price -->
+                    <select name="fuelItems" id="fuelItems" onChange="calculatePrice()" hidden>
+                        <option hidden disabled selected value="0"> -- Choose a type of Fuel -- </option>
+                        <option value="14">Gasoline (+14% of base price)</option>
+                        <option value="21">Diesel (+21% of base price)</option>
+                        <option value="9">Hybrid (+9% of base price)</option>
+                        <option value="5">Electric (+5% of base price)</option>
+                    </select>
+                    <!-- Option Values of transmision to calculate the percentage of vehicle price -->
+                    <select name="transmissionItems" id="transmissionItems" onChange="calculatePrice()" hidden>
+                        <option hidden disabled selected value="0"> -- Choose a type of Transmission -- </option>
+                        <option value="0">Manual</option>
+                        <option value="19">Automatic (+19% of base price)</option>
+                    </select>
+                    <!-- Asking for user input for the number of days to rent the vehicle -->
+                    <label for="days" id="enterdays">Please enter the number of days you want to rent the vehicle (from 1 to 30 days):</label>
+                    <input type="number" id="days" name="days" value="1" min="1" max="30" onChange="calculatePrice()">
+                    <!-- Showing the total estimated price -->
+                    <label for="rentPrice" id="yourPrice" hidden>Your estimated price is:</label>
+                    <input type="text" id="rentPrice" Size=8 value="" readonly>
+                    <div class="form-button">
+                        <button type="button" class="yellow-button" onclick="calculatePrice()">Rent this Vehicle</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Contact Form -->
+            <div class="contact">
+                <h2>Contact</h2>
+                <form action="">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="subject">Sujet</label>
+                    <input type="subject" id="subject" name="subject" required>
+
+                    <label for="message">Message</label>
+
+                    <textarea name="message" id="message" cols="30" rows="8" required></textarea>
+                    <!-- Button to show overlay with all the informations entered by the user -->
+                    <div class="form-button">
+                        <button type="button" class="yellow-button" id="send-message" class="yellow-button" onclick="openOverlay()">Send Message</button>
+                    </div>
+                    <!-- Contact informations confirm overlay -->
+                    <div id="contact-overlay" class="overlay">
+                        <div class="overlay-content">
+                            <img id="overlay-close" onclick="closeOverlay()" src="icons/mobile-menu-close.svg" alt="Close Contact Overlay">
+                            <p>Your name is: <br><br><span class="info" id="confirm-name"></span>.</p>
+                            <p>Your email is: <br><br><span class="info" id="confirm-email"></span>.</p>
+                            <p>Your subject: <br><br><span class="info" id="confirm-subject"></span>.</p>
+                            <p>Your message: <br><br><span class="info" id="confirm-message"></span>.</p>
+                            <button type="button" class="yellow-button" id="confirm-button" onclick="closeOverlay()">Confirm</button>
+                        </div>
+                    </div>
+                    <div id="contact-overlay-empty" class="overlay">
+                        <div class="overlay-content">
+                            <img id="overlay-close" onclick="closeOverlay()" src="icons/mobile-menu-close.svg" alt="Close Contact Overlay">
+                            <h3>Please fill all the required fields.</h3>
+                            <button type="button" class="yellow-button" id="confirm-button" onclick="closeOverlay()">Accept</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13490.721856244174!2d-9.2355192!3d32.2935679!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6f59fa5bb517f58a!2sYouCode%20Safi!5e0!3m2!1sfr!2sma!4v1613672800107!5m2!1sfr!2sma" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </section>
+    <!-- Reservation/Contact End -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <a class="logo" href="index.html">Drive<span>Now</span></a>
+            <div class="footer-left">
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-middle">
+                <ul>
+                    <li><a href="#">Help & FAQ</a></li>
+                    <li><a href="#">Solutions for Business</a></li>
+                    <li><a href="#">Service Partners</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></li>
+                    <li><p>drivenow@contact.com</p></li>
+                    <li><p>123 456 7890</p></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>© 2021 DriveNow Corporation - All Rights Reserved. <span><a href="#">Terms of Use</a></span><span><a href="#">Privacy Policy</a></span></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Javascript File -->
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>

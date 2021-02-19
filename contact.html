@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DriveNow contact form with confirmation of user input informations in a pop-up.">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="icons/favicon.ico">
+    <title>DriveNow</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container">
+            <a class="logo" href="index.html">Drive<span>Now</span></a>
+            <!-- Open Mobile Menu -->
+            <img id="menu-open-scroll" class="mobile-menu-open" onclick="openNav()" src="icons/mobile-menu.svg" alt="Open Mobile Navigation Menu">
+            <!-- <img id="menu-open" class="mobile-menu-open" onclick="openNav()" src="icons/mobile-menu.svg" alt="Open Mobile Navigation Menu"> -->
+            <nav class="mobile-navigation" id="mobile">
+                <!-- Close Mobile Menu -->
+                <img id="menu-close" class="mobile-menu-close" onclick="closeNav()" src="icons/mobile-menu-close.svg" alt="Close Mobile Navigation Menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li class="current"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Desktop Navigation -->
+            <nav class="desktop-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li class="current"><a href="contact.html">Contact</a></li>
+                    <li class="fb-icon"><a href="#"></a></li>
+                    <li class="tweet-icon"><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End -->
+    
+    <!-- Reservation/Contact Section -->
+    <section class="resertact">
+        <div class="container">
+            <!-- Contact Form that takes user input and shows it in a popup/overlay -->
+            <div class="contact">
+                <h2>Contact</h2>
+                <form action="">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="subject">Sujet</label>
+                    <input type="subject" id="subject" name="subject" required>
+
+                    <label for="message">Message</label>
+
+                    <textarea name="message" id="message" cols="30" rows="8" required></textarea>
+                    <!-- Button to show overlay with all the informations entered by the user -->
+                    <div class="form-button">
+                        <button type="button" class="yellow-button" id="send-message" class="yellow-button" onclick="openOverlay()">Send Message</button>
+                    </div>
+                    <!-- Contact informations confirm overlay -->
+                    <div id="contact-overlay" class="overlay">
+                        <div class="overlay-content">
+                            <img id="overlay-close" onclick="closeOverlay()" src="icons/mobile-menu-close.svg" alt="Close Contact Overlay">
+                            <p>Your name is: <br><br><span class="info" id="confirm-name"></span>.</p>
+                            <p>Your email is: <br><br><span class="info" id="confirm-email"></span>.</p>
+                            <p>Your subject: <br><br><span class="info" id="confirm-subject"></span>.</p>
+                            <p>Your message: <br><br><span class="info" id="confirm-message"></span>.</p>
+                            <button type="button" class="yellow-button" id="confirm-button" onclick="closeOverlay()">Confirm</button>
+                        </div>
+                    </div>
+                    <div id="contact-overlay-empty" class="overlay">
+                        <div class="overlay-content">
+                            <img id="overlay-close" onclick="closeOverlay()" src="icons/mobile-menu-close.svg" alt="Close Contact Overlay">
+                            <h3>Please fill all the required fields.</h3>
+                            <button type="button" class="yellow-button" id="confirm-button" onclick="closeOverlay()">Accept</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13490.721856244174!2d-9.2355192!3d32.2935679!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6f59fa5bb517f58a!2sYouCode%20Safi!5e0!3m2!1sfr!2sma!4v1613672800107!5m2!1sfr!2sma" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </section>
+    <!-- Reservation/Contact End -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <a class="logo" href="index.html">Drive<span>Now</span></a>
+            <div class="footer-left">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li class="current"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-middle">
+                <ul>
+                    <li><a href="#">Help & FAQ</a></li>
+                    <li><a href="#">Solutions for Business</a></li>
+                    <li><a href="#">Service Partners</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></li>
+                    <li><p>drivenow@contact.com</p></li>
+                    <li><p>123 456 7890</p></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>© 2021 DriveNow Corporation - All Rights Reserved. <span><a href="#">Terms of Use</a></span><span><a href="#">Privacy Policy</a></span></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Javascript File -->
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>

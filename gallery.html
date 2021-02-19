@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DriveNow gallery of all types of vehicles available for rental purposes.">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="icons/favicon.ico">
+    <title>DriveNow</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container">
+            <a class="logo" href="index.html">Drive<span>Now</span></a>
+            <!-- Open Mobile Menu -->
+            <img id="menu-open-scroll" class="mobile-menu-open" onclick="openNav()" src="icons/mobile-menu.svg" alt="Open Mobile Navigation Menu">
+            <!-- <img id="menu-open" class="mobile-menu-open" onclick="openNav()" src="icons/mobile-menu.svg" alt="Open Mobile Navigation Menu"> -->
+            <nav class="mobile-navigation" id="mobile">
+                <!-- Close Mobile Menu -->
+                <img id="menu-close" class="mobile-menu-close" onclick="closeNav()" src="icons/mobile-menu-close.svg" alt="Close Mobile Navigation Menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current"><a href="gallery.html">Gallery</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Desktop Navigation -->
+            <nav class="desktop-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current"><a href="gallery.html">Gallery</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="fb-icon"><a href="#"></a></li>
+                    <li class="tweet-icon"><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End -->
+    
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="featured">Our Vehicles</h2>
+            <div class="vehicles">
+
+                <div class="car-card">
+                    <img src="images/moto-1.jpg" alt="Vehicle Type Motorbike" class="car-img">
+                    <h3 class="car-title">Motorbike</h3>
+                    <p class="car-price">Starts at <span>10€</span> per day</p>
+                    <ul class="car-specs">
+                        <li class="car-specs-fuel">Fuel Type : <span>Electric, Gasoline.</span></li>
+                        <li class="car-specs-transmission">Transmission Type : <span>None.</span></li>
+                    </ul>
+                </div>
+
+                <div class="car-card">
+                    <img src="images/citadine-1.png" alt="Vehicle Type Economy" class="car-img">
+                    <h3 class="car-title">Economy</h3>
+                    <p class="car-price">Starts at <span>12€</span> per day</p>
+                    <ul class="car-specs">
+                        <li class="car-specs-fuel">Fuel Type : <span>Electric, Hybrid, Gasoline, Diesel.</span></li>
+                        <li class="car-specs-transmission">Transmission Type : <span>Manual.</span></li>
+                    </ul>
+                </div>
+
+                <div class="car-card">
+                    <img src="images/compact-1.png" alt="Vehicle Type Compact" class="car-img">
+                    <h3 class="car-title">Compact</h3>
+                    <p class="car-price">Starts at <span>14€</span> per day</p>
+                    <ul class="car-specs">
+                        <li class="car-specs-fuel">Fuel Type : <span>Hybride, Gasoline, Diesel.</span></li>
+                        <li class="car-specs-transmission">Transmission Type : <span>Manual.</span></li>
+                    </ul>
+                </div>
+
+                <div class="car-card">
+                    <img src="images/utilitaire-1.png" alt="Vehicle Type Utility" class="car-img">
+                    <h3 class="car-title">Utility</h3>
+                    <p class="car-price">Starts at <span>16€</span> per day</p>
+                    <ul class="car-specs">
+                        <li class="car-specs-fuel">Fuel Type : <span>Diesel.</span></li>
+                        <li class="car-specs-transmission">Transmission Type : <span>Manual.</span></li>
+                    </ul>
+                </div>
+
+                <div class="car-card">
+                    <img src="images/berline-1.png" alt="Vehicle Type Luxury" class="car-img">
+                    <h3 class="car-title">Luxury</h3>
+                    <p class="car-price">Starts at <span>20€</span> per day</p>
+                    <ul class="car-specs">
+                        <li class="car-specs-fuel">Fuel Type : <span>Hybrid, Gasoline, Diesel.</span></li>
+                        <li class="car-specs-transmission">Transmission Type : <span>Automatic.</span></li>
+                    </ul>
+                </div>
+
+                <div class="car-card">
+                    <img src="images/camion-1.png" alt="Vehicle Type Truck" class="car-img">
+                    <h3 class="car-title">Truck</h3>
+                    <p class="car-price">Starts at <span>250€</span> per day</p>
+                    <ul class="car-specs">
+                        <li class="car-specs-fuel">Fuel Type : <span>Diesel.</span></li>
+                        <li class="car-specs-transmission">Transmission Type : <span>Automatic.</span></li>
+                    </ul>
+                </div>
+
+                <div class="car-card">
+                    <img src="images/chantier-1.png" alt="Vehicle Type Construction Machine" class="car-img">
+                    <h3 class="car-title">Construction Machine</h3>
+                    <p class="car-price">Starts at <span>900€</span> per day</p>
+                    <ul class="car-specs">
+                        <li class="car-specs-fuel">Fuel Type : <span>Gasoline, Diesel.</span></li>
+                        <li class="car-specs-transmission">Transmission Type : <span>Manual.</span></li>
+                    </ul>
+                </div>
+        </div>
+    </section>
+    <!-- Gallery End -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <a class="logo" href="index.html">Drive<span>Now</span></a>
+            <div class="footer-left">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current"><a href="gallery.html">Gallery</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-middle">
+                <ul>
+                    <li><a href="#">Help & FAQ</a></li>
+                    <li><a href="#">Solutions for Business</a></li>
+                    <li><a href="#">Service Partners</a></li>
+                    <li><a href="#">Site Map</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></li>
+                    <li><p>drivenow@contact.com</p></li>
+                    <li><p>123 456 7890</p></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>© 2021 DriveNow Corporation - All Rights Reserved. <span><a href="#">Terms of Use</a></span><span><a href="#">Privacy Policy</a></span></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Javascript File -->
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>
